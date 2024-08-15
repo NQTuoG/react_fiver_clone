@@ -1,0 +1,1 @@
+chưa các funtion trong dự án
