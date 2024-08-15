@@ -15,6 +15,7 @@ import AdminTemplate from "../template/AdminTemplate/AdminTemplate";
 const AdminLogin = React.lazy(() => import("./../pages/AdminLogin/AdminLogin"));
 
 import { Skeleton } from "antd";
+import CreateUser from "../pages/CreateUser/CreateUser";
 // import ManagerUser from "../pages/ManagerUser/ManagerUser";
 const ManagerUser = React.lazy(() =>
   import("./../pages/ManagerUser/ManagerUser")
@@ -62,6 +63,10 @@ const useRoutesCustom = () => {
     {
       path: "/admin-login",
       element: <AdminLogin />,
+    },
+    {
+      path: "/create-user",
+      element: <CreateUser />,
     },
   ]);
   return routes;
