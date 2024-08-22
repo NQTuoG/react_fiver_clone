@@ -38,6 +38,11 @@ const AdminTemplate = () => {
               icon: <i className="fa-solid fa-handshake" />,
               label: <Link>Công Việc đã thuê</Link>,
             },
+            {
+              key: "34",
+              icon: <UserOutlined />,
+              label: <Link to="/admin/create-user">Tạo người dùng</Link>,
+            },
           ]}
         />
       </Sider>

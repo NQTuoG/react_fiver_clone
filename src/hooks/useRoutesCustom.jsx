@@ -58,15 +58,15 @@ const useRoutesCustom = () => {
             </Suspense>
           ),
         },
+        {
+          path: "create-user",
+          element: <CreateUser />,
+        },
       ],
     },
     {
       path: "/admin-login",
       element: <AdminLogin />,
-    },
-    {
-      path: "/create-user",
-      element: <CreateUser />,
     },
   ]);
   return routes;
