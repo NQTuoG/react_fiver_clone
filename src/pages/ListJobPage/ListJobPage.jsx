@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { congViecService } from "../../service/congViec.service";
 const ListJobPage = () => {
-  // [ {hoTen: "Khai"},{hoTen: "Đông"}] ==> [<div></div>,<div></div>]
   const [searchParam, setSearchParam] = useSearchParams();
   const [listJob, setListJob] = useState([]);
   console.log(searchParam.get("tenCongViec"));

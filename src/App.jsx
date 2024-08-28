@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
-import useRoutesCustom from "./hooks/useRoutesCustom"
-import { Bounce, ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import useRoutesCustom from "./hooks/useRoutesCustom";
+import { Bounce, ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 // 1. Khởi tạo một context
-export const NotificationContext = React.createContext()
+export const NotificationContext = React.createContext();
 
 function App() {
-  const router = useRoutesCustom()
+  const router = useRoutesCustom();
 
-  const showNotification =(content,type,duration =4000 ) => {
+  const showNotification = (content, type, duration = 4000) => {
     toast[type](content, {
       position: "top-right",
       autoClose: duration,
@@ -19,17 +19,21 @@ function App() {
       progress: undefined,
       theme: "light",
       transition: Bounce,
-    })
-  }
+    });
+  };
 
-  return<>
-  <NotificationContext.Provider value={{
-    showNotification : showNotification
-  }}>
-    <ToastContainer/>
-    {router}
-  </NotificationContext.Provider>
-  </>  
+  return (
+    <>
+      <NotificationContext.Provider
+        value={{
+          showNotification: showNotification,
+        }}
+      >
+        <ToastContainer />
+        {router}
+      </NotificationContext.Provider>
+    </>
+  );
 }
 
-export default App
+export default App;
