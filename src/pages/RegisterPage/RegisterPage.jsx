@@ -1,4 +1,6 @@
 import React, { useContext } from "react";
+import { useLottie } from "lottie-react";
+import signInAnimation from "./../../assets/animation/sginInAnimation.json"; // Ensure this path is correct
 import InputCustom from "../../components/Input/InputCustom";
 import { Link, useNavigate } from "react-router-dom";
 import { path } from "../../common/path";
@@ -15,10 +17,16 @@ const RegisterPage = () => {
     mobile: 576,
     tablet: 768,
   });
-
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { showNotification } = useContext(NotificationContext);
+
+  const animationOptions = {
+    animationData: signInAnimation,
+    loop: true,
+  };
+
+  const { View } = useLottie(animationOptions);
 
   const validationSchema = yup.object({
     name: yup.string().required("Vui lòng không bỏ trống tên người dùng"),
@@ -99,6 +107,13 @@ const RegisterPage = () => {
           isResponsive.mobile ? "block" : "flex"
         } items-center h-screen`}
       >
+        <div
+          className={`registerPage_img ${
+            isResponsive.mobile ? "w-full" : "w-1/2"
+          }`}
+        >
+          {View}
+        </div>
         <div
           className={`registerPage_form ${
             isResponsive.mobile ? "w-full" : "w-1/2"
@@ -196,7 +211,12 @@ const RegisterPage = () => {
               Register
             </button>
           </form>
-          <Link />
+          <Link
+            to="/sign-in"
+            className="mt-3 text-blue-600 inline-block hover:underline duration-300"
+          >
+            Đã có tài khoản? Đăng nhập
+          </Link>
         </div>
       </div>
     </div>
