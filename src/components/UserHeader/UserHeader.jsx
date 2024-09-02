@@ -111,7 +111,6 @@ const UserHeader = () => {
               </Link>
               {isFormSearchVisible && ( // Conditionally render FormSeachProduct
                 <WrapperSuggestJob>
-                  <div></div>
                   <FormSeachProduct />
                 </WrapperSuggestJob>
               )}
