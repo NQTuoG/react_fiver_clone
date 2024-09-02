@@ -11,12 +11,9 @@ const Mybanner = () => {
             <h1>
               Find the perfect <i>freelance</i> services for your business
             </h1>
-
-            <WrapperSuggestJob>
-              <div className="search">
-                <FormSeachProduct />
-              </div>
-            </WrapperSuggestJob>
+            <div className="search">
+              <FormSeachProduct />
+            </div>
 
             <div className="popular">
               <span>Trusted by:</span>

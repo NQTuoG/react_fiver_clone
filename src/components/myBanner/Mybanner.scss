@@ -32,29 +32,10 @@
   
         .search {
           align-items: center;
-          background: white;
           border-radius: 4px;
           display: flex;
           justify-content: space-between;
-          max-width: 93%;
-          // .searchInput {
-          //   align-items: center;
-          //   display: flex;
-          //   font-size: 16px;
-          //   gap: 10px;
-          //   padding-left: 12px;
-          //   width: 100%;
-  
-          //   input {
-          //     border: none;
-          //     font-size: 16px;
-          //     outline: none;
-          //     width: 100%;
-          //     &::placeholder {
-          //       color: #94979c;
-          //     }
-          //   }
-          // }
+          
           button {
             background: #096238;
             border: none;

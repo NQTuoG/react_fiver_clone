@@ -13,6 +13,7 @@ const UserTemplate = () => {
       {/* header */}
       <UserHeader />
       {/* main */}
+
       <main>
         <Mybanner />
         <Slide title="Popular services" slidesToShow={5} arrowsScroll={4}>

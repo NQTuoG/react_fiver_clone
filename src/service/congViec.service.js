@@ -7,4 +7,7 @@ export const congViecService = {
   chiTietCongViec: (data) => {
     return http.get(`/cong-viec/${data}`);
   },
+  layDanhSachCongViec: () => {
+    return http.get("/cong-viec");
+  },
 };

@@ -17,6 +17,7 @@ const AdminLogin = React.lazy(() => import("./../pages/AdminLogin/AdminLogin"));
 import { Skeleton } from "antd";
 import CreateUser from "../pages/CreateUser/CreateUser";
 import RegisterPage from "../pages/RegisterPage/RegisterPage";
+import DetailJobPage from "../pages/DetailJobPage/DetailJobPage";
 // import ManagerUser from "../pages/ManagerUser/ManagerUser";
 const ManagerUser = React.lazy(() =>
   import("./../pages/ManagerUser/ManagerUser")
@@ -35,6 +36,10 @@ const useRoutesCustom = () => {
               <ListJobPage />,
             </Suspense>
           ),
+        },
+        {
+          path: path.detailJob,
+          element: <DetailJobPage />,
         },
       ],
     },
