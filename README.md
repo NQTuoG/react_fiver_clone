@@ -1,3 +1,6 @@
+Thành viên nhóm: Trường Toàn Và Quốc Tường
+Trường Toàn: Đăng Ký + Trang chi tiết
+Quốc Tường: Đăng nhập + Trang Chủ Animation
 day la setup thu muc du an reactjs phien ban 18 cua bcs12
 
 - để chạy được dự án, lưu ý cài đặt phiên bản node là v20.11.1
